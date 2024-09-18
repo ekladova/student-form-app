@@ -1,0 +1,75 @@
+@use "../../mixins.scss" as *;
+
+.student_wrapper {
+	td {
+		border-bottom: 1px solid $lightGray;
+		padding: 25px 30px;
+	}
+	.student {
+		&_info {
+			display: flex;
+			align-items: center;
+			a {
+				color: black;
+				text-decoration: none;
+				font-style: italic;
+			}
+		}
+		&_image {
+			margin-right: 25px;
+			height: 50px;
+		}
+		&_name {
+			position: relative;
+		}
+		&_form {
+			color: $darkGray;
+		}
+		&_SEND {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				height: 30px;
+			}
+		}
+		&_id {
+			position: absolute;
+			right: -20px;
+			top: 0px;
+
+			&_tooltip {
+				height: 15px;
+				cursor: pointer;
+			}
+
+			&_info {
+				background-color: $lightGray;
+				height: 20px;
+				min-width: 35px;
+				padding: 5px 10px;
+				border-radius: 5px;
+				position: absolute;
+				right: -150px;
+				top: -5px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 915px) {
+	.student_wrapper {
+		td {
+			padding: 20px;
+		}
+		.student {
+			&_image {
+				height: 30px;
+			}
+		}
+	}
+}

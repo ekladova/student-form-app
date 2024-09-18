@@ -1,0 +1,7 @@
+$darkGray: #ababab;
+$lightGray: #e5e7e9;
+$lightestGray: #f2f3f4;
+
+@mixin border($size, $color) {
+	border: $size solid $color;
+}

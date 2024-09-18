@@ -1,0 +1,50 @@
+@use "../../mixins.scss" as *;
+
+.detail-view {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 100px 50px;
+	margin: 50px auto;
+	@include border(1px, $lightGray);
+	border-radius: 15px;
+	width: 65%;
+	.student {
+		&-image {
+			img {
+				height: 150px;
+			}
+		}
+		&-info {
+			&_id {
+				color: $darkGray;
+			}
+
+			&_isSEND {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
+
+.back-button_wrapper {
+	margin: 50px;
+	button {
+		background-color: transparent;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: 915px) {
+	.back-button_wrapper {
+		margin: 0;
+	}
+	.detail-view {
+		width: 90%;
+		padding: 50px 0;
+		margin: 50px auto;
+	}
+}

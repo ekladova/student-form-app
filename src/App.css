@@ -1,0 +1,15 @@
+.App {
+	width: 60%;
+	margin: auto;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@media only screen and (max-width: 900px) {
+	.App {
+		width: 100%;
+		margin: 0;
+	}
+}

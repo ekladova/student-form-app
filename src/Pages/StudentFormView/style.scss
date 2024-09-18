@@ -1,0 +1,52 @@
+@use "../../mixins.scss" as *;
+
+.student-table {
+	width: 90%;
+	@include border(1px, $lightGray);
+	border-radius: 15px;
+	margin: 20px auto;
+	border-spacing: 0;
+	border-collapse: separate;
+	overflow: hidden;
+
+	thead {
+		th {
+			border-bottom: 1px solid $lightGray;
+			padding: 25px 30px;
+			cursor: pointer;
+		}
+	}
+
+	&_header {
+		text-align: start;
+		&:last-child {
+			text-align: center;
+		}
+		&_sort {
+			cursor: pointer;
+			svg {
+				height: 20px;
+			}
+		}
+	}
+
+	.error-noResults {
+		padding: 30px;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 915px) {
+	.student-table {
+		width: 100%;
+		margin: 0;
+		thead {
+			th {
+				padding: 20px 5px;
+				vertical-align: middle;
+			}
+			th:first-child {
+				padding-left: 20px;
+			}
+		}
+	}
+}

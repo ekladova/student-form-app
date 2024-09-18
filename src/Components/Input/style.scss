@@ -1,0 +1,42 @@
+@use "../../mixins.scss" as *;
+
+.search {
+	&_wraper {
+		width: 90%;
+		margin: 20px auto;
+		position: relative;
+	}
+	&_input {
+		width: -webkit-fill-available;
+		@include border(1px, $lightestGray);
+		background-color: $lightestGray;
+		border-radius: 10px;
+		padding: 10px 10px 10px 50px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	&_icon {
+		position: absolute;
+		cursor: text;
+		left: 10px;
+		top: 4px;
+	}
+}
+
+@media only screen and (max-width: 915px) {
+	.search {
+		&_wraper {
+			width: 95%;
+			margin: 10px auto;
+		}
+		&_input {
+			height: 40px;
+			font-size: 17px;
+		}
+		&_icon {
+			top: 15px;
+		}
+	}
+}
