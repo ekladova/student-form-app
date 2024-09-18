@@ -28,4 +28,4 @@ This is a student management application, which features a list of students' nam
         /StudentFormView
     /Utilities
         /images
-        /studentData.json```
+        /studentData.json
